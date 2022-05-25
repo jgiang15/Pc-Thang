@@ -36,35 +36,55 @@ class EditSpec extends Component {
       .then(() => this.setState({ amt: this.state.spec.length }))
       .then(() => {
         for (let i = 1; i < this.state.amt + 1; i++) {
-          let value = this.state.spec[i - 1].title
-          let qId = this.state.questions[i - 1]._id
-          if (qId === undefined) qId = ''
-          if (value === undefined) value = ''
+          const specId = this.state.spec[i - 1]._id
+          const motherboard = this.state.spec[i - 1].motherboard
+          const gpu = this.state.spec[i - 1].gpu
+          const ram = this.state.spec[i - 1].ram
+          const powersupply = this.state.spec[i - 1].powersupply
+          const cpu = this.state.spec[i - 1].cpu
+          const storage = this.state[i - 1].storage
+          // if (specId === undefined) specId = ''
+          // if (value === undefined) value = ''
           this.setState({
-            ['question' + i]: value,
-            ['question' + i + 'key']: qId
+            ['spec' + i + 'key']: specId,
+            ['spec' + i + 'motherboard']: motherboard,
+            ['spec' + i + 'gpu']: gpu,
+            ['spec' + i + 'ram']: ram,
+            ['spec' + i + 'powersupply']: powersupply,
+            ['spec' + i + 'cpu']: cpu,
+            ['spec' + i + 'storage']: storage
           })
         }
       })
       .catch(console.error)
   }
 
-	onShowSurvey = () => {
+	onShowPost = () => {
 	  const id = this.props.match.params.id
 	  const { user } = this.props
-	  showSurvey(user, id)
+	  showPost(user, id)
 	    .then((response) =>
-	      this.setState({ questions: response.data.survey.questions })
+	      this.setState({ spec: response.data.post.spec })
 	    )
 	    .then(() => {
-	      for (let i = 1; i < this.state.questions.length + 1; i++) {
-	        let value = this.state.questions[i - 1].title
-	        let qId = this.state.questions[i - 1]._id
-	        if (qId === undefined) qId = ''
-	        if (value === undefined) value = ''
+	      for (let i = 1; i < this.state.spec.length + 1; i++) {
+	        const specId = this.state.spec[i - 1]._id
+	        const motherboard = this.state.spec[i - 1].motherboard
+	        const gpu = this.state.spec[i - 1].gpu
+	        const ram = this.state.spec[i - 1].ram
+	        const powersupply = this.state.spec[i - 1].powersupply
+	        const cpu = this.state.spec[i - 1].cpu
+	        const storage = this.state[i - 1].storage
+	        // if (qId === undefined) qId = ''
+	        // if (value === undefined) value = ''
 	        this.setState({
-	          ['question' + i]: value,
-	          ['question' + i + 'key']: qId
+	          ['spec' + i + 'key']: specId,
+	          ['spec' + i + 'motherboard']: motherboard,
+	          ['spec' + i + 'gpu']: gpu,
+	          ['spec' + i + 'ram']: ram,
+	          ['spec' + i + 'powersupply']: powersupply,
+	          ['spec' + i + 'cpu']: cpu,
+	          ['spec' + i + 'storage']: storage
 	        })
 	      }
 	    })
@@ -80,10 +100,15 @@ class EditSpec extends Component {
 	  event.preventDefault()
 	  for (let i = 1; i < this.state.amt + 1; i++) {
 	    const { user, history } = this.props
-	    const title = this.state['question' + i]
-	    const qId = this.state['question' + i + 'key']
-	    if (qId === undefined) {
-	      createQuestion(title, 'short answer', this.state.sId, user)
+	    const specId = this.state['spec' + i + 'key']
+	    const motherboard = this.state['spec' + i + 'motherboard']
+	    const gpu = this.state['spec' + i + 'gpu']
+	    const ram = this.state['spec' + i + 'ram']
+	    const powersupply = this.state['spec' + i + 'powersupply']
+	    const cpu = this.state['spec' + i + 'cpu']
+	    const storage = this.state['spec' + i + 'storage']
+	    if (specId === undefined) {
+	      createSpec(title, 'short answer', this.state.sId, user)
 	        .then(() => this.onShowSurvey())
 	        .then(() => this.setJSX())
 	        .then(() => history.push('/surveys/' + this.state.sId))
