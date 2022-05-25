@@ -108,16 +108,16 @@ class EditSpec extends Component {
 	    const cpu = this.state['spec' + i + 'cpu']
 	    const storage = this.state['spec' + i + 'storage']
 	    if (specId === undefined) {
-	      createSpec(title, 'short answer', this.state.sId, user)
-	        .then(() => this.onShowSurvey())
-	        .then(() => this.setJSX())
-	        .then(() => history.push('/surveys/' + this.state.sId))
+	      createSpec(user, this.state.postId, motherboard, gpu, ram, powersupply, cpu, storage)
+	      // .then(() => this.onShowPost())
+	      // .then(() => this.setJSX())
+	        .then(() => history.push('/posts/' + this.state.postId))
 	        .catch(() => console.error)
 	    } else {
-	      updateQuestion(title, 'short answer', this.state.sId, qId, user)
-	        .then(() => this.onShowSurvey())
-	        .then(() => this.setJSX())
-	        .then(() => history.push('/surveys/' + this.state.sId))
+	      updateSpec(user, this.state.postId, specId, motherboard, gpu, ram, powersupply, cpu, storage)
+	      // .then(() => this.onShowSurvey())
+	      // .then(() => this.setJSX())
+	        .then(() => history.push('/posts/' + this.state.postId))
 	        .catch(() => console.error)
 	    }
 	  }
@@ -140,7 +140,7 @@ class EditSpec extends Component {
 	    this.setJSX()
 	    return
 	  }
-	  deleteQuestion(sId, qId, user)
+	  deleteSpec(sId, qId, user)
 	    .then(() => this.onShowSurvey())
 	    .then(() => {
 	      for (let i = num; i < amt; i++) {
