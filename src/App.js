@@ -14,6 +14,7 @@ import Post from './components/post/Post'
 import CreatePost from './components/post/CreatePost'
 import IndexPosts from './components/post/IndexPost'
 import UpdatePosts from './components/post/UpdatePost'
+import EditSpec from './components/post/EditSpec'
 
 class App extends Component {
   constructor (props) {
@@ -112,6 +113,14 @@ class App extends Component {
             user={user}
             path='/posts/:id/update'
             render={() => <UpdatePosts msgAlert={this.msgAlert} user={user} />}
+          />
+          <AuthenticatedRoute
+            exact
+            user={user}
+            path='/posts/:id/update/spec'
+            render={() => (
+              <EditSpec msgAlert={this.msgAlert} user={user} />
+            )}
           />
         </main>
       </Fragment>
