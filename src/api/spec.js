@@ -1,7 +1,7 @@
 import apiUrl from '../apiConfig'
 import axios from 'axios'
 
-export const createSpec = (motherboard, gpu, ram, powerSupply, cpu, storage, postId, user) => {
+export const createSpec = (user, postId, motherboard, gpu, ram, powerSupply, cpu, storage) => {
   return axios({
     method: 'POST',
     url: apiUrl + '/specs/',
@@ -23,7 +23,7 @@ export const createSpec = (motherboard, gpu, ram, powerSupply, cpu, storage, pos
   })
 }
 
-export const updateSpec = (motherboard, gpu, ram, powerSupply, cpu, storage, postId, specId, user) => {
+export const updateSpec = (user, postId, specId, motherboard, gpu, ram, powerSupply, cpu, storage) => {
   return axios({
     method: 'PATCH',
     url: apiUrl + '/specs/' + specId,
@@ -45,7 +45,7 @@ export const updateSpec = (motherboard, gpu, ram, powerSupply, cpu, storage, pos
   })
 }
 
-export const deleteSpec = (postId, specId, user) => {
+export const deleteSpec = (user, postId, specId) => {
   return axios({
     method: 'DELETE',
     url: apiUrl + '/specs/' + specId,

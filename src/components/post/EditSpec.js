@@ -9,7 +9,7 @@ import {
 } from '../../api/spec'
 import { showPost } from '../../api/post'
 
-class EditSpec extends Component {
+class EditSpecs extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -178,7 +178,7 @@ class EditSpec extends Component {
             <Form.Control
               required
               type='text'
-              value={this.state['spec' + i + 'motherboard']}
+              value={this.state['spec' + i + 'motherboard'] || ''}
               name={'spec' + i + 'motherboard'}
               placeholder='Enter Motherboard'
               onChange={this.handleChange}
@@ -189,7 +189,7 @@ class EditSpec extends Component {
             <Form.Control
               required
               type='text'
-              value={this.state['spec' + i + 'gpu']}
+              value={this.state['spec' + i + 'gpu'] || ''}
               name={'spec' + i + 'gpu'}
               placeholder='Enter GPU'
               onChange={this.handleChange}
@@ -200,7 +200,7 @@ class EditSpec extends Component {
             <Form.Control
               required
               type='text'
-              value={this.state['spec' + i + 'ram']}
+              value={this.state['spec' + i + 'ram'] || ''}
               name={'spec' + i + 'ram'}
               placeholder='Enter RAM'
               onChange={this.handleChange}
@@ -211,7 +211,7 @@ class EditSpec extends Component {
             <Form.Control
               required
               type='text'
-              value={this.state['spec' + i + 'powersupply']}
+              value={this.state['spec' + i + 'powersupply'] || ''}
               name={'spec' + i + 'powersupply'}
               placeholder='Enter PowerSupply'
               onChange={this.handleChange}
@@ -222,7 +222,7 @@ class EditSpec extends Component {
             <Form.Control
               required
               type='text'
-              value={this.state['spec' + i + 'cpu']}
+              value={this.state['spec' + i + 'cpu'] || ''}
               name={'spec' + i + 'cpu'}
               placeholder='Enter CPU'
               onChange={this.handleChange}
@@ -233,7 +233,7 @@ class EditSpec extends Component {
             <Form.Control
               required
               type='text'
-              value={this.state['spec' + i + 'storage']}
+              value={this.state['spec' + i + 'storage'] || ''}
               name={'spec' + i + 'storage'}
               placeholder='Enter Storage'
               onChange={this.handleChange}
@@ -286,4 +286,4 @@ class EditSpec extends Component {
   }
 }
 
-export default withRouter(EditSpec)
+export default withRouter(EditSpecs)

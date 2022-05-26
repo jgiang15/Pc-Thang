@@ -39,7 +39,7 @@ class Post extends Component {
   // }
 
   seePosts = () => {
-    this.setState({ seeResponses: true })
+    this.setState({ seePosts: true })
   }
 
   render () {
@@ -53,7 +53,14 @@ class Post extends Component {
       specJSX = 'Add Some Specs to Your PC'
     } else {
       specJSX = post.spec.map((spec) => (
-        <li key={spec._id}>{spec.title}</li>
+        <div key={spec._id}>
+          <li>MotherBoard: {spec.motherboard}</li>
+          <li>GPU: {spec.gpu}</li>
+          <li>RAM: {spec.ram}</li>
+          <li>PowerSupply: {spec.powersupply}</li>
+          <li>CPU: {spec.cpu}</li>
+          <li>Storage: {spec.storage}</li>
+        </div>
       ))
     }
     let buttonJSX
@@ -66,9 +73,9 @@ class Post extends Component {
           <Button variant='primary' onClick={this.updateClick}>
             Update Post
           </Button>
-          <Button variant='primary' onClick={this.seePosts}>
+          {/* <Button variant='primary' onClick={this.seePosts}>
             See Posts
-          </Button>
+          </Button> */}
         </>
       )
     } else {
