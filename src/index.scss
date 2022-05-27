@@ -1,1 +1,38 @@
+$theme-colors: (
+    "primary": #aa6bc9,
+    "danger": rgb(255, 4, 242)
+);
 @import '~bootstrap/scss/bootstrap';
+
+body {
+    min-height: 100%;
+    opacity: .8;
+    background: url("./Images/pc-setup.jpeg") no-repeat center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    background-color: #aa6bc9;
+    color: white;
+}
+
+.navbar-brand {
+    margin-left: 2rem;
+
+}
+
+.btn,
+.btn-primary {
+    margin-top: 10px;
+    margin-right: 10px;
+    // background-color: tomato !important;
+    // border-color: tomato;
+    box-shadow: 3px 5px rgb(235, 203, 203);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #563787;
+}
