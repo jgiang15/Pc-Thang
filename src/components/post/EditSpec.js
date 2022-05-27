@@ -121,7 +121,6 @@ class EditSpecs extends Component {
           .catch(() => console.error)
       }
     }
-    console.log(this.state)
   }
 
   deleteDynamic = (event) => {
