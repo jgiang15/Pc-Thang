@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/jgiang15/Pc-Thang/static/css/main.b29c8896.chunk.css",
+    "main.js": "/jgiang15/Pc-Thang/static/js/main.32268497.chunk.js",
+    "main.js.map": "/jgiang15/Pc-Thang/static/js/main.32268497.chunk.js.map",
+    "runtime-main.js": "/jgiang15/Pc-Thang/static/js/runtime-main.37adea4c.js",
+    "runtime-main.js.map": "/jgiang15/Pc-Thang/static/js/runtime-main.37adea4c.js.map",
+    "static/js/2.780eb697.chunk.js": "/jgiang15/Pc-Thang/static/js/2.780eb697.chunk.js",
+    "static/js/2.780eb697.chunk.js.map": "/jgiang15/Pc-Thang/static/js/2.780eb697.chunk.js.map",
+    "index.html": "/jgiang15/Pc-Thang/index.html",
+    "static/css/main.b29c8896.chunk.css.map": "/jgiang15/Pc-Thang/static/css/main.b29c8896.chunk.css.map",
+    "static/js/2.780eb697.chunk.js.LICENSE.txt": "/jgiang15/Pc-Thang/static/js/2.780eb697.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/jgiang15/Pc-Thang/static/media/pc-setup.389c0854.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.37adea4c.js",
+    "static/js/2.780eb697.chunk.js",
+    "static/css/main.b29c8896.chunk.css",
+    "static/js/main.32268497.chunk.js"
+  ]
+}
