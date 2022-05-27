@@ -3,6 +3,8 @@
 - [Pc-Thang](https://jgiang15.github.io/Pc-Thang/)
 - [Front-End Repo](https://github.com/jgiang15/Pc-Thang)
 - [Front-End Repo](https://github.com/jgiang15/Pc-Thang-Api)
+- [Front-End Deployed](https://jgiang15.github.io/Pc-Thang/)
+- [Back-End Deployed](https://still-chamber-03601.herokuapp.com)
 
 ### Overview:
 Create and account and create posts for others to see the specs of your PC
@@ -38,6 +40,9 @@ Once the account is created: create posts and add specs to them
 ### Project Planning
 - first had to think of idea for the project. I had thought about things that I am interested in, that is why I did a project about PC parts
 - Had to create a Wireframe and ERD 
+- Created a schedule to accomplish daily 
+- Solved errors and carefully scanning code
+- reached out to class mates to help with issues and also used class issue threads.
 
 ### Installation instructions
 - Fork and clone this repository
